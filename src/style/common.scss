@@ -1,0 +1,541 @@
+@import "mixin";
+body,
+div,
+span,
+header,
+footer,
+nav,
+section,
+aside,
+article,
+ul,
+dl,
+dt,
+dd,
+li,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+b,
+textarea,
+button,
+input,
+select,
+figure,
+figcaption {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-style: normal;
+  text-decoration: none;
+  border: none;
+  color: #333;
+  box-sizing: border-box;
+  font-family: "Microsoft Yahei", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  &:focus {
+    outline: none;
+  }
+}
+
+// * {
+//     touch-action: none;
+// }
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background-color: #F5F5F5;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+/*定义滑块 内阴影+圆角*/
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: #555;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="search"],
+input[type="reset"] {
+  -webkit-appearance: none;
+}
+
+textarea {
+  -webkit-appearance: none;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #F5F5F5;
+}
+
+.clear:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.clear {
+  zoom: 1;
+}
+
+.back_img {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.margin {
+  margin: 0 auto;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.paddingTop {
+  padding-top: 1.95rem;
+}
+
+html {
+  height: 100%;
+  font-size: $defFSze;
+}
+
+body {
+  @extend html;
+}
+
+a {
+  color: $defCr29;
+  text-decoration: none;
+}
+
+input:-webkit-autofill {
+  background-color: red !important;
+  background-image: none !important;
+  color: #000 !important;
+}
+
+.clearFix {
+  clear: both;
+}
+
+.layer2rm {
+  height: $navLht;
+  line-height: $navLht;
+  width: 100%;
+}
+
+.layer02rm {
+  height: .2rem;
+  line-height: .2rem;
+  width: 100%;
+}
+
+.layer05rm {
+  height: 20px;
+  line-height: 20px;
+  width: 100%;
+}
+
+.cover-background {
+  @include wh(100%, 100%);
+  @include allcover;
+  background: #000;
+  z-index: 100;
+  opacity: .2;
+}
+
+@-webkit-keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  100% {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+    -webkit-transform: scale3d(.9, .9, .9);
+    transform: scale3d(.9, .9, .9);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+    -webkit-transform: scale3d(.97, .97, .97);
+    transform: scale3d(.97, .97, .97);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  100% {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+    -webkit-transform: scale3d(.9, .9, .9);
+    transform: scale3d(.9, .9, .9);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+    -webkit-transform: scale3d(.97, .97, .97);
+    transform: scale3d(.97, .97, .97);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@-webkit-keyframes zoomOut {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes zoomOut {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes bounceInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0, $payht);
+    transform: translate(0, $payht);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+@-webkit-keyframes bounceInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0, $payht);
+    transform: translate(0, $payht);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+@-webkit-keyframes bounceInDown {
+  from {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, $payht);
+    transform: translate(0, $payht);
+  }
+}
+
+@keyframes bounceInDown {
+  from {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, $payht);
+    transform: translate(0, $payht);
+  }
+}
+
+.cover-animate {
+  transition: all 1s;
+  animation: bounceIn .6s;
+}
+
+.cover-animate-leave {
+  animation: zoomOut .4s;
+}
+
+.pay-animate {
+  transition: all 1s;
+  animation: bounceInUp .6s;
+}
+
+.pay-animate-leave {
+  transition: all 1s;
+  animation: bounceInDown .6s;
+}
+
+.router-slid-enter-active,
+.router-slid-leave-active {
+  transition: all .4s;
+}
+
+.router-slid-enter,
+.router-slid-leave-active {
+  transform: translate3d(2rem, 0, 0);
+  opacity: 0;
+}
+
+.pageBtn {
+  @include sc(34px, $defCrFF);
+  width: 100%;
+  color: $defFtCrFF;
+  border-radius: 20px;
+  line-height: 90px;
+  height: 90px;
+  font-weight: 300;
+  text-align: center;
+  background-color: $mainCr;
+  opacity: 0.5;
+}
+
+.mainCr {
+  color: $mainCr;
+}
+
+.pageBtnColor {
+  opacity: 1;
+}
+
+.coverpart {
+  @include wh(100%, 100%);
+  @include allcover;
+}
+
+.detImg {
+  overflow: hidden;
+  background-color: $defCrFF;
+  img {
+    width: 100%;
+  }
+}
+
+.success {
+  background: url("~@/assets/transfer/success.png") no-repeat;
+  background-size: 100%;
+}
+
+/*2018.5.17 王帅新增-S-*/
+
+//充值中心上半部分css
+.recharge {
+  padding: 30px;
+}
+
+.recharge_d1 {
+  border-radius: 20px;
+  background-color: $debgCrFF;
+  box-shadow: 0 6px 9px 0 rgba(208, 209, 209, 0.15);
+  padding: 0 40px;
+  h1 {
+    font-weight: 500;
+    @include sc(26px,
+    $fontCr33);
+    padding-top: 39px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e6e6e6;
+    /*no*/
+    span {
+      color: $fontCr99;
+      padding-left: 11px;
+    }
+  }
+  h2 {
+    @include sc(24px,
+    $fontCr99);
+    font-weight: 500;
+    padding: 26px 0;
+    .iconfont {
+      width: 30px;
+      height: 30px;
+      fill: $fontCr99;
+      float: right;
+    }
+    span {
+      em {
+        @include sc(24px,
+        #0f8feb);
+        font-style: normal;
+      }
+    }
+  }
+}
+
+.numberInput {
+  position: relative;
+  .iconfont {
+    width: 45px;
+    height: 45px;
+    fill: $mainCr;
+    position: absolute;
+    @include ct;
+  }
+  input {
+    height: 190px;
+    @include sc(48px,
+    $fontCr33);
+    padding-left: 65px;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: solid 1px $bdrInCre6;
+  }
+}
+
+.recharge_d3 {
+  button {
+    display: inline-block;
+    width: 100%;
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+    box-shadow: 0 6px 9px 0 rgba(251, 86, 10, 0.15);
+    background-color: $mainCr;
+    border-radius: 20px;
+    @include sc(34px,
+    $defCrFF);
+    margin-top: 50px;
+  }
+  .noClick {
+    opacity: 0.5;
+  }
+}
+
+.recharged3_p {
+  margin-top: 50px;
+  .iconfont {
+    width: 24px;
+    height: 24px;
+    fill: $fontCr99;
+    padding: 3px 0;
+    vertical-align: top;
+    margin-right: 12px;
+  }
+  .check {
+    .iconfont {
+      fill: $mainCr;
+    }
+  }
+  line-height: 30px;
+  @include sc(24px,
+  $fontCr99);
+  a {
+    color: $mainCr;
+  }
+}
+
+/*2018.5.17 王帅新增-E-*/
+
+.noItem {
+  @include disFlexC(center,
+  center);
+  width: 100%;
+  height: 100%;
+  .noImg {
+    width: 400px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    .noText {
+      @include sc(30px,
+      $fontCr8f);
+      text-align: center;
+      margin-top: 30px;
+    }
+  }
+}

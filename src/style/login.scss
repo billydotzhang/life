@@ -1,0 +1,182 @@
+.loginBox {
+  background-color: $debgCrf5;
+  height: 100%;
+}
+
+.loginFrom {
+  padding: 30px;
+  overflow: hidden;
+}
+
+.loginInTitle {
+  color: $mainCr;
+  text-align: center;
+  line-height: 3rem;
+  font-size: $defFSze;
+  i {
+    font-size: 0.5rem;
+    font-family: PingFang-SC;
+    margin: 0 0.2rem;
+  }
+}
+
+.fromInAct {
+  input {
+    border: 1px solid $mainCr !important;
+  }
+}
+
+.fromInput {
+  margin-bottom: 20px;
+  width: 100%;
+  position: relative;
+  input {
+    width: 100%;
+    box-shadow: 0px 6px 9px 0 rgba(208, 209, 209, 0.15);
+    border-radius: 20px;
+    height: 100px;
+    @include sc(32px, $fontCr33);
+    padding: 0 30px 0 110px;
+  }
+  .iconfont {
+    width: 45px;
+    height: 45px;
+    fill: $fontCr88;
+    position: absolute;
+    left: 32.5px;
+    top: 27.5px;
+  }
+}
+
+.loginInFrom {
+  .fromInput {
+    input {
+      padding: 0 40px;
+    }
+  }
+}
+
+.inputAddBtn {
+  @include display-flex;
+  button {
+    display: inline-block;
+    box-shadow: 0px 6px 9px 0 rgba(208, 209, 209, 0.15);
+    @include sc(28px, $defCrFF);
+    background-color: #0f8feb;
+    margin-left: 20px;
+    width: 70%;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 100px;
+    height: 100px;
+  }
+}
+
+.loginBtn {
+  width: 100%;
+  line-height: 90px;
+  background-color: $mainCr;
+  border: 1px solid $btnCr;
+  border-radius: 20px;
+  @include sc(34px, $defFtCrFF);
+  font-weight: 500;
+  text-align: center;
+  box-shadow: 0 6px 9px 0 rgba(251, 86, 10, 0.15);
+}
+
+.loginInBottom {
+  margin-top: 1rem;
+  @include display-flex;
+  @include justify-content(center);
+  a {
+    color: $fontCr8f;
+    text-decoration: underline;
+  }
+}
+
+.loginBottom {
+  margin-top: 41px;
+  text-align: center;
+  @include sc(28px, $fontCr33);
+  a {
+    color: $fontCr8f;
+    span {
+      @include sc(28px, $mainCr);
+      text-decoration: underline;
+      line-height: 35px;
+    }
+  }
+}
+
+.weLogin {
+  @include disFlexC(center, center);
+  .weBox {
+    text-align: center;
+    i {
+      font-size: 2rem;
+      color: #09bb07;
+    }
+    span {
+      display: block;
+      color: $fontCr8f;
+      padding-top: 0.3rem;
+      font-size: $defFSze;
+    }
+  }
+}
+
+.prompting {
+  padding-top: 7rem;
+  @include disFlexC(center, center);
+  .promptImg {
+    position: relative;
+    width: 6rem;
+    height: 7rem;
+    span {
+      width: 6rem;
+      position: absolute;
+      display: block;
+      margin: auto;
+      bottom: 0;
+      text-align: center;
+      color: $defCr29;
+    }
+  }
+}
+
+.promptBottom {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.regProtocol {
+  position: absolute;
+  margin-top: 400px;
+  bottom: 50px;
+  text-align: center;
+  width: 100%;
+  @include sc(28px, $fontCr99);
+  a {
+    color: $mainCr;
+  }
+}
+
+.erroTxt {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  height: 100px;
+  span {
+    @include center;
+    @include sc(32px, #fe0202);
+  }
+}
+
+.noLogin {
+  opacity: 0.5;
+}
+
+.codeNoBtn {
+  background-color: $debgCrAF;
+}
